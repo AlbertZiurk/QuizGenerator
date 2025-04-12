@@ -46,6 +46,9 @@ function criarSessao(e) {
 
     alert("Sessão criada com sucesso!");
     form.reset();
+
+    // Redirecionar para sessoes.html
+    window.location.href = "sessoes.html";
 }
 
 // Função para exibir as sessões já existentes
@@ -57,6 +60,22 @@ function exibirSessoes() {
         const card = criarCard(sessao, index);
         container.appendChild(card);
     });
+
+        const botaoVoltar = document.createElement("button");
+        botaoVoltar.textContent = "Voltar";
+        botaoVoltar.className = "mt-8 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded";
+        botaoVoltar.addEventListener("click", () => {
+            window.location.href = "../index.html"; 
+        });
+
+
+    // Envolva em um div centralizado, se quiser
+    const wrapper = document.createElement("div");
+    wrapper.className = "flex justify-center mt-8 mb-10"; // Adicionei um margin top para distanciar do conteúdo
+    wrapper.appendChild(botaoVoltar);
+
+    // Adiciona o botão ao final do container
+    container.appendChild(wrapper);
 }
 
 // Função para criar o card de cada sessão
@@ -81,6 +100,7 @@ function criarCard(sessao, index) {
             <a href="./aleatorizar-sessao.html" class="bg-yellow-500 hover:bg-yellow-700 rounded-lg px-4 py-2 text-white cursor-pointer">Quiz</a>
         </div>   
       </div>
+
     `;
 
     return div;
