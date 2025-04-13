@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleatorizar Sessão</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex flex-col bg-gray-500 h-screen">
+    <header class="flex w-full py-2 bg-blue-500 justify-center h-[10%]">
+        <!-- Título ou logo do site -->
+    </header>
+    <div class="hero flex flex-col flex-1 p-6 bg-red-700 w-full justify-center items-center">
+        <p class="mb-10 text-xl font-bold">Deseja Aleatorizar esta sessão?</p>
+        <a href="#" id="btnQuiz" data-index="0" onclick="iniciarQuiz(0);" class="bg-yellow-500 hover:bg-yellow-700 rounded-lg px-4 py-2 text-white cursor-pointer">Quiz</a>
+        
+        <div id="accordion" class="w-full mt-6">
+            <!-- Perguntas aleatorizadas aparecerão aqui -->
+        </div>
+    </div>
+    <footer class="bg-green-600 w-full py-2 text-center h-1/9 flex justify-center items-center">
+        <p>@Todos os direitos Reservados</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
